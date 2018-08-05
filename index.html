@@ -242,7 +242,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="写作"><a href="#写作" class="headerlink" title="写作"></a>写作</h1><p>你可以执行下列命令来创建一篇新文章。<br>$ hexo new [layout] <title><br>您可以在命令中指定文章的布局（layout），默认为 post，可以通过修改 _config.yml 中的 default_layout 参数来指定默认布局。</title></p>
-<h1 id="布局"><a href="#布局" class="headerlink" title="布局"></a>布局</h1><h2 id="布局1"><a href="#布局1" class="headerlink" title="布局1"></a>布局1</h2><p>Hexo 有三种默认布局：post、page 和 draft，它们分别对应不同的路径，而您自定义的其他布局和 post 相同，都将储存到 source/_posts 文件夹。</p>
+<h1 id="布局"><a href="#布局" class="headerlink" title="布局"></a>布局</h1><h2 id="布局1"><a href="#布局1" class="headerlink" title="布局1"></a>布局1</h2><p>Hexo 有三种默认布局：post、page 和 draft，它们分别对应不同的路径，而您自定义的其他布局和 post 相同，都将储存到 source/_posts 文件夹。<br><img src="/image/saber.jpg" title="[200px] [200px]"></p>
 
       
 
@@ -251,6 +251,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">测试标签</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -510,6 +521,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">测试标签</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
