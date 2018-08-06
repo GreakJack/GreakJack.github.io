@@ -6,18 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: 测试标签 | GreakJack</title>
+  <title>表单验证之validate | GreakJack</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="共同进步">
-<meta property="og:type" content="website">
-<meta property="og:title" content="GreakJack">
-<meta property="og:url" content="http://yoursite.com/tags/测试标签/index.html">
+  <meta name="description" content="全面的指导使用validate插件">
+<meta property="og:type" content="article">
+<meta property="og:title" content="表单验证之validate">
+<meta property="og:url" content="http://yoursite.com/2018/08/06/表单验证之validate/index.html">
 <meta property="og:site_name" content="GreakJack">
-<meta property="og:description" content="共同进步">
+<meta property="og:description" content="全面的指导使用validate插件">
 <meta property="og:locale" content="中文/英文">
+<meta property="og:image" content="http://yoursite.com/2018/08/06/表单验证之validate/1.png">
+<meta property="og:image" content="http://yoursite.com/2018/08/06/表单验证之validate/2.png">
+<meta property="og:image" content="http://yoursite.com/2018/08/06/表单验证之validate/3.png">
+<meta property="og:updated_time" content="2018-08-06T08:08:41.804Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="GreakJack">
-<meta name="twitter:description" content="共同进步">
+<meta name="twitter:title" content="表单验证之validate">
+<meta name="twitter:description" content="全面的指导使用validate插件">
+<meta name="twitter:image" content="http://yoursite.com/2018/08/06/表单验证之validate/1.png">
   
     <link rel="alternative" href="/atom.xml" title="GreakJack" type="application/atom+xml">
   
@@ -157,60 +162,294 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-表单验证之validate" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/05/hello123/" class="archive-article-date">
-  	<time datetime="2018-08-05T06:26:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-05</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/05/hello123/">hello123</a>
+    <h1 class="article-title" itemprop="name">
+      表单验证之validate
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">测试标签</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+        <a href="/2018/08/06/表单验证之validate/" class="archive-article-date">
+  	<time datetime="2018-08-06T07:05:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-06</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="一、使用说明："><a href="#一、使用说明：" class="headerlink" title="一、使用说明："></a>一、使用说明：</h1><h3 id="1-表单验证分为两种方式：前端验证和后端验证。"><a href="#1-表单验证分为两种方式：前端验证和后端验证。" class="headerlink" title="1.表单验证分为两种方式：前端验证和后端验证。"></a>1.表单验证分为两种方式：前端验证和后端验证。</h3><h3 id="2-validate是属于前端的一种验证"><a href="#2-validate是属于前端的一种验证" class="headerlink" title="2.validate是属于前端的一种验证"></a>2.validate是属于前端的一种验证</h3><h3 id="3-validate是使用JQuery写的一个插件，所以使用validate必须使用JQuery"><a href="#3-validate是使用JQuery写的一个插件，所以使用validate必须使用JQuery" class="headerlink" title="3.validate是使用JQuery写的一个插件，所以使用validate必须使用JQuery"></a>3.validate是使用JQuery写的一个插件，所以使用validate必须使用JQuery</h3><a id="more"></a>
+<h1 id="二、使用前提："><a href="#二、使用前提：" class="headerlink" title="二、使用前提："></a>二、使用前提：</h1><h3 id="1-导入两个必需的包（这两个包网上都有百度下载）"><a href="#1-导入两个必需的包（这两个包网上都有百度下载）" class="headerlink" title="1.导入两个必需的包（这两个包网上都有百度下载）"></a>1.导入两个必需的包（这两个包网上都有百度下载）</h3><pre><code>&lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery-1.8.3.js&quot; &gt;&lt;/script&gt;
+&lt;scrip type=&quot;text/javascript&quot; src=&quot;js/jquery.validate.min.js&quot; &gt;&lt;/script&gt;
+</code></pre><p>这里的src路径跟你们自己所放位置而定</p>
+<h1 id="三、使用方式："><a href="#三、使用方式：" class="headerlink" title="三、使用方式："></a>三、使用方式：</h1><h2 id="话不多说直接看代码吧-这是整一个演示代码，下面我会一一分析"><a href="#话不多说直接看代码吧-这是整一个演示代码，下面我会一一分析" class="headerlink" title="话不多说直接看代码吧(这是整一个演示代码，下面我会一一分析)"></a>话不多说直接看代码吧(这是整一个演示代码，下面我会一一分析)</h2><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;UTF-8&quot;&gt;
+        &lt;title&gt;&lt;/title&gt;
+        &lt;style type=&quot;text/css&quot;&gt;
+            label.error{
+                color: red;
+            }
+        &lt;/style&gt;
+        &lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery-1.8.3.js&quot; &gt;&lt;/script&gt;
+        &lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery.validate.min.js&quot; &gt;&lt;/script&gt;
+        &lt;script type=&quot;text/javascript&quot;&gt;
+            $(function(){
+                $(&quot;#myForm&quot;).validate({
+                    rules:{
+                        username:{
+                            required:true,
+                            minlength:6
+                        },
+                        pwd:{
+                            required:true,
+                            minlength:6,
+                            digits:true
+                        },
+                        rePwd:{
+                            required:true,
+                            equalTo:&quot;[name=&apos;pwd&apos;]&quot;
+                        },
+                        sex:{
+                            required:true
+                        },
+                        email:{
+                            required:true,
+                            email:true
+                        }
+                    },
+                    messages:{
+                        username:{
+                            required:&quot;必须填写&quot;,
+                            minlength:&quot;长度最少是6位&quot;
+                        },
+                        pwd:{
+                            required:&quot;必须填写&quot;,
+                            minlength:&quot;长度最少是6位&quot;,
+                            digits:&quot;必须是数字&quot;
+                        },
+                        rePwd:{
+                            required:&quot;必须填写&quot;,
+                            equalTo:&quot;两次密码输入不相同&quot;
+                        },
+                        sex:{
+                            required:&quot;必须勾选&quot;
+                        },
+                        email:{
+                            required:&quot;必须填写&quot;,
+                            email:&quot;邮箱格式不正确&quot;
+                        }
+                    }
+                });
+            });
+        &lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;form action=&quot;#&quot; method=&quot;post&quot; id=&quot;myForm&quot;&gt;
+            用户名：&lt;input type=&quot;text&quot; name=&quot;username&quot; /&gt;&lt;br/&gt;
+            密码：&lt;input type=&quot;password&quot; name=&quot;pwd&quot; /&gt;&lt;br/&gt;
+            确认密码：&lt;input type=&quot;password&quot; name=&quot;rePwd&quot; /&gt;&lt;br /&gt;
+            邮件：&lt;input type=&quot;email&quot; name=&quot;email&quot; /&gt;&lt;br /&gt;
+            性别：&lt;input type=&quot;radio&quot; name=&quot;sex&quot; value=&quot;男&quot; /&gt;
+                &lt;input type=&quot;radio&quot; name=&quot;sex&quot; value=&quot;女&quot; /&gt;
+                &lt;label for=&quot;sex&quot; class=&quot;error&quot; style=&quot;display: none;&quot;&gt;&lt;/label&gt;&lt;br /&gt;
+            &lt;input type=&quot;submit&quot; value=&quot;提交&quot; /&gt;
+        &lt;/form&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h1 id="四、代码解析"><a href="#四、代码解析" class="headerlink" title="四、代码解析"></a>四、代码解析</h1><h3 id="1-首先我们先看一小部分的"><a href="#1-首先我们先看一小部分的" class="headerlink" title="1.首先我们先看一小部分的"></a>1.首先我们先看一小部分的</h3><pre><code>&lt;script type=&quot;text/javascript&quot;&gt;
+        $(function(){
+            $(&quot;#myForm&quot;).validate({
+                rules:{//rules是固定写法
+                    username:{//username就是要获取表单中name=username的input
+                        //下面就是制定的规则
+                        required:true,
+                        minlength:6
+                    }
+                }
+            });
+        });
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;form action=&quot;#&quot; method=&quot;post&quot; id=&quot;myForm&quot;&gt;
+        用户名：&lt;input type=&quot;text&quot; name=&quot;username&quot; /&gt;&lt;br/&gt;                        
+        &lt;input type=&quot;submit&quot; value=&quot;提交&quot; /&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+</code></pre><h3 id="然后这一小部分的效果图"><a href="#然后这一小部分的效果图" class="headerlink" title="然后这一小部分的效果图"></a>然后这一小部分的效果图</h3><p><img src="/2018/08/06/表单验证之validate/1.png" alt="图片1"><br>那么我们可以看到，它会出现一个提示</p>
+<h3 id="2-这时如果我们想，它的提示是英文的，可以自定义自己的提示吗？下面看一下以下的代码"><a href="#2-这时如果我们想，它的提示是英文的，可以自定义自己的提示吗？下面看一下以下的代码" class="headerlink" title="2.这时如果我们想，它的提示是英文的，可以自定义自己的提示吗？下面看一下以下的代码"></a>2.这时如果我们想，它的提示是英文的，可以自定义自己的提示吗？下面看一下以下的代码</h3><pre><code>&lt;script type=&quot;text/javascript&quot;&gt;
+        $(function(){
+            $(&quot;#myForm&quot;).validate({
+                rules:{
+                    username:{
+                        required:true,
+                        minlength:6
+                    }
+                },
+                messages:{//这是自定义提示
+                    username:{
+                        required:&quot;必须填写&quot;,
+                        minlength:&quot;长度最少是6位&quot;
+                    },
+                }
+            });
+        });
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;form action=&quot;#&quot; method=&quot;post&quot; id=&quot;myForm&quot;&gt;
+        用户名：&lt;input type=&quot;text&quot; name=&quot;username&quot; /&gt;&lt;br/&gt;                        
+        &lt;input type=&quot;submit&quot; value=&quot;提交&quot; /&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+</code></pre><h3 id="然后这一小部分的效果图-1"><a href="#然后这一小部分的效果图-1" class="headerlink" title="然后这一小部分的效果图"></a>然后这一小部分的效果图</h3><p><img src="/2018/08/06/表单验证之validate/2.png" alt="图片2"></p>
+<ul>
+<li>只要按照上面的规则写得话就可以自定义提示信息了</li>
+</ul>
+<h1 id="五、校验类型"><a href="#五、校验类型" class="headerlink" title="五、校验类型"></a>五、校验类型</h1><p><img src="/2018/08/06/表单验证之validate/3.png" alt="图片3"></p>
+<ul>
+<li>我们可以根据自己的需要为表单添加所需的提示信息 </li>
+</ul>
 
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/08/06/表单验证之validate/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2018/08/05/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -233,9 +472,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
@@ -301,10 +540,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">测试标签</a>
-              </li>
             
             <div class="clearfix"></div>
           </ul>
