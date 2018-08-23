@@ -6,23 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>表单验证之validate | GreakJack</title>
+  <title>Servlet的基本了解 | GreakJack</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="全面的指导使用validate插件">
+  <meta name="description" content="一、Servlet 简介：1.什么是Servlet呢？Servlet运行在服务端的Java小程序，是sun公司提供一套规范（接口），用来处理客户端请求、响应给浏览器的动态资源。但servlet的实质就是java代码，通过java的API动态的向客户端输出内容">
 <meta property="og:type" content="article">
-<meta property="og:title" content="表单验证之validate">
-<meta property="og:url" content="http://yoursite.com/2018/08/06/表单验证之validate/index.html">
+<meta property="og:title" content="Servlet的基本了解">
+<meta property="og:url" content="http://yoursite.com/2018/08/23/Servlet的基本了解/index.html">
 <meta property="og:site_name" content="GreakJack">
-<meta property="og:description" content="全面的指导使用validate插件">
+<meta property="og:description" content="一、Servlet 简介：1.什么是Servlet呢？Servlet运行在服务端的Java小程序，是sun公司提供一套规范（接口），用来处理客户端请求、响应给浏览器的动态资源。但servlet的实质就是java代码，通过java的API动态的向客户端输出内容">
 <meta property="og:locale" content="中文/英文">
-<meta property="og:image" content="http://yoursite.com/2018/08/06/表单验证之validate/1.png">
-<meta property="og:image" content="http://yoursite.com/2018/08/06/表单验证之validate/2.png">
-<meta property="og:image" content="http://yoursite.com/2018/08/06/表单验证之validate/4.png">
-<meta property="og:updated_time" content="2018-08-23T11:23:30.449Z">
+<meta property="og:updated_time" content="2018-08-23T12:18:52.228Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="表单验证之validate">
-<meta name="twitter:description" content="全面的指导使用validate插件">
-<meta name="twitter:image" content="http://yoursite.com/2018/08/06/表单验证之validate/1.png">
+<meta name="twitter:title" content="Servlet的基本了解">
+<meta name="twitter:description" content="一、Servlet 简介：1.什么是Servlet呢？Servlet运行在服务端的Java小程序，是sun公司提供一套规范（接口），用来处理客户端请求、响应给浏览器的动态资源。但servlet的实质就是java代码，通过java的API动态的向客户端输出内容">
   
     <link rel="alternative" href="/atom.xml" title="GreakJack" type="application/atom+xml">
   
@@ -162,161 +158,67 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-表单验证之validate" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Servlet的基本了解" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      表单验证之validate
+      Servlet的基本了解
     </h1>
   
 
         
-        <a href="/2018/08/06/表单验证之validate/" class="archive-article-date">
-  	<time datetime="2018-08-06T07:05:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-06</time>
+        <a href="/2018/08/23/Servlet的基本了解/" class="archive-article-date">
+  	<time datetime="2018-08-23T11:16:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-23</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="一、使用说明："><a href="#一、使用说明：" class="headerlink" title="一、使用说明："></a>一、使用说明：</h1><h3 id="1-表单验证分为两种方式：前端验证和后端验证。"><a href="#1-表单验证分为两种方式：前端验证和后端验证。" class="headerlink" title="1.表单验证分为两种方式：前端验证和后端验证。"></a>1.表单验证分为两种方式：前端验证和后端验证。</h3><h3 id="2-validate是属于前端的一种验证"><a href="#2-validate是属于前端的一种验证" class="headerlink" title="2.validate是属于前端的一种验证"></a>2.validate是属于前端的一种验证</h3><h3 id="3-validate是使用JQuery写的一个插件，所以使用validate必须使用JQuery"><a href="#3-validate是使用JQuery写的一个插件，所以使用validate必须使用JQuery" class="headerlink" title="3.validate是使用JQuery写的一个插件，所以使用validate必须使用JQuery"></a>3.validate是使用JQuery写的一个插件，所以使用validate必须使用JQuery</h3><a id="more"></a>
-<h1 id="二、使用前提："><a href="#二、使用前提：" class="headerlink" title="二、使用前提："></a>二、使用前提：</h1><h3 id="1-导入两个必需的包（这两个包网上都有百度下载）"><a href="#1-导入两个必需的包（这两个包网上都有百度下载）" class="headerlink" title="1.导入两个必需的包（这两个包网上都有百度下载）"></a>1.导入两个必需的包（这两个包网上都有百度下载）</h3><pre><code>&lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery-1.8.3.js&quot; &gt;&lt;/script&gt;
-&lt;scrip type=&quot;text/javascript&quot; src=&quot;js/jquery.validate.min.js&quot; &gt;&lt;/script&gt;
-</code></pre><p>这里的src路径跟你们自己所放位置而定</p>
-<h1 id="三、使用方式："><a href="#三、使用方式：" class="headerlink" title="三、使用方式："></a>三、使用方式：</h1><h2 id="话不多说直接看代码吧-这是整一个演示代码，下面我会一一分析"><a href="#话不多说直接看代码吧-这是整一个演示代码，下面我会一一分析" class="headerlink" title="话不多说直接看代码吧(这是整一个演示代码，下面我会一一分析)"></a>话不多说直接看代码吧(这是整一个演示代码，下面我会一一分析)</h2><pre><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-    &lt;head&gt;
-        &lt;meta charset=&quot;UTF-8&quot;&gt;
-        &lt;title&gt;&lt;/title&gt;
-        &lt;style type=&quot;text/css&quot;&gt;
-            label.error{
-                color: red;
-            }
-        &lt;/style&gt;
-        &lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery-1.8.3.js&quot; &gt;&lt;/script&gt;
-        &lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery.validate.min.js&quot; &gt;&lt;/script&gt;
-        &lt;script type=&quot;text/javascript&quot;&gt;
-            $(function(){
-                $(&quot;#myForm&quot;).validate({
-                    rules:{
-                        username:{
-                            required:true,
-                            minlength:6
-                        },
-                        pwd:{
-                            required:true,
-                            minlength:6,
-                            digits:true
-                        },
-                        rePwd:{
-                            required:true,
-                            equalTo:&quot;[name=&apos;pwd&apos;]&quot;
-                        },
-                        sex:{
-                            required:true
-                        },
-                        email:{
-                            required:true,
-                            email:true
-                        }
-                    },
-                    messages:{
-                        username:{
-                            required:&quot;必须填写&quot;,
-                            minlength:&quot;长度最少是6位&quot;
-                        },
-                        pwd:{
-                            required:&quot;必须填写&quot;,
-                            minlength:&quot;长度最少是6位&quot;,
-                            digits:&quot;必须是数字&quot;
-                        },
-                        rePwd:{
-                            required:&quot;必须填写&quot;,
-                            equalTo:&quot;两次密码输入不相同&quot;
-                        },
-                        sex:{
-                            required:&quot;必须勾选&quot;
-                        },
-                        email:{
-                            required:&quot;必须填写&quot;,
-                            email:&quot;邮箱格式不正确&quot;
-                        }
-                    }
-                });
-            });
-        &lt;/script&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;form action=&quot;#&quot; method=&quot;post&quot; id=&quot;myForm&quot;&gt;
-            用户名：&lt;input type=&quot;text&quot; name=&quot;username&quot; /&gt;&lt;br/&gt;
-            密码：&lt;input type=&quot;password&quot; name=&quot;pwd&quot; /&gt;&lt;br/&gt;
-            确认密码：&lt;input type=&quot;password&quot; name=&quot;rePwd&quot; /&gt;&lt;br /&gt;
-            邮件：&lt;input type=&quot;email&quot; name=&quot;email&quot; /&gt;&lt;br /&gt;
-            性别：&lt;input type=&quot;radio&quot; name=&quot;sex&quot; value=&quot;男&quot; /&gt;
-                &lt;input type=&quot;radio&quot; name=&quot;sex&quot; value=&quot;女&quot; /&gt;
-                &lt;label for=&quot;sex&quot; class=&quot;error&quot; style=&quot;display: none;&quot;&gt;&lt;/label&gt;&lt;br /&gt;
-            &lt;input type=&quot;submit&quot; value=&quot;提交&quot; /&gt;
-        &lt;/form&gt;
-    &lt;/body&gt;
-&lt;/html&gt;
-</code></pre><h1 id="四、代码解析"><a href="#四、代码解析" class="headerlink" title="四、代码解析"></a>四、代码解析</h1><h3 id="1-首先我们先看一小部分的"><a href="#1-首先我们先看一小部分的" class="headerlink" title="1.首先我们先看一小部分的"></a>1.首先我们先看一小部分的</h3><pre><code>&lt;script type=&quot;text/javascript&quot;&gt;
-        $(function(){
-            $(&quot;#myForm&quot;).validate({
-                rules:{//rules是固定写法
-                    username:{//username就是要获取表单中name=username的input
-                        //下面就是制定的规则
-                        required:true,
-                        minlength:6
-                    }
-                }
-            });
-        });
-&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;form action=&quot;#&quot; method=&quot;post&quot; id=&quot;myForm&quot;&gt;
-        用户名：&lt;input type=&quot;text&quot; name=&quot;username&quot; /&gt;&lt;br/&gt;                        
-        &lt;input type=&quot;submit&quot; value=&quot;提交&quot; /&gt;
-    &lt;/form&gt;
-&lt;/body&gt;
-</code></pre><h3 id="然后这一小部分的效果图"><a href="#然后这一小部分的效果图" class="headerlink" title="然后这一小部分的效果图"></a>然后这一小部分的效果图</h3><p><img src="/2018/08/06/表单验证之validate/1.png" alt="图片1"><br>那么我们可以看到，它会出现一个提示</p>
-<h3 id="2-这时如果我们想，它的提示是英文的，可以自定义自己的提示吗？下面看一下以下的代码"><a href="#2-这时如果我们想，它的提示是英文的，可以自定义自己的提示吗？下面看一下以下的代码" class="headerlink" title="2.这时如果我们想，它的提示是英文的，可以自定义自己的提示吗？下面看一下以下的代码"></a>2.这时如果我们想，它的提示是英文的，可以自定义自己的提示吗？下面看一下以下的代码</h3><pre><code>&lt;script type=&quot;text/javascript&quot;&gt;
-        $(function(){
-            $(&quot;#myForm&quot;).validate({
-                rules:{
-                    username:{
-                        required:true,
-                        minlength:6
-                    }
-                },
-                messages:{//这是自定义提示
-                    username:{
-                        required:&quot;必须填写&quot;,
-                        minlength:&quot;长度最少是6位&quot;
-                    },
-                }
-            });
-        });
-&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;form action=&quot;#&quot; method=&quot;post&quot; id=&quot;myForm&quot;&gt;
-        用户名：&lt;input type=&quot;text&quot; name=&quot;username&quot; /&gt;&lt;br/&gt;                        
-        &lt;input type=&quot;submit&quot; value=&quot;提交&quot; /&gt;
-    &lt;/form&gt;
-&lt;/body&gt;
-</code></pre><h3 id="然后这一小部分的效果图-1"><a href="#然后这一小部分的效果图-1" class="headerlink" title="然后这一小部分的效果图"></a>然后这一小部分的效果图</h3><p><img src="/2018/08/06/表单验证之validate/2.png" alt="图片2"></p>
-<ul>
-<li>只要按照上面的规则写得话就可以自定义提示信息了</li>
-</ul>
-<h1 id="五、校验类型"><a href="#五、校验类型" class="headerlink" title="五、校验类型"></a>五、校验类型</h1><p><img src="/2018/08/06/表单验证之validate/4.png" alt="图片3"></p>
-<ul>
-<li>我们可以根据自己的需要为表单添加所需的提示信息 </li>
-</ul>
+        <h1 id="一、Servlet-简介："><a href="#一、Servlet-简介：" class="headerlink" title="一、Servlet 简介："></a>一、Servlet 简介：</h1><h2 id="1-什么是Servlet呢？"><a href="#1-什么是Servlet呢？" class="headerlink" title="1.什么是Servlet呢？"></a>1.什么是Servlet呢？</h2><p>Servlet运行在服务端的Java小程序，是sun公司提供一套规范（接口），用来处理客户端请求、响应给浏览器的动态资源。但servlet的实质就是java代码，通过java的API动态的向客户端输出内容<br><a id="more"></a></p>
+<h2 id="2-Servlet的快速入门"><a href="#2-Servlet的快速入门" class="headerlink" title="2.Servlet的快速入门"></a>2.Servlet的快速入门</h2><p><strong> 实现步骤：</strong><br>1)创建类继承HttpServlet类<br>2)覆盖doGet和doPost方法<br>3)在web.xml中进行Servlet的配置</p>
+<p><strong> Servlet的代码 </strong> </p>
+<pre><code>public class MyFirstServlet extends HttpServlet {
 
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    }
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        doGet(request, response);
+    }
+
+}
+</code></pre><p><strong>  Web.xml的配置  </strong> </p>
+<pre><code> &lt;servlet&gt;
+  &lt;servlet-name&gt;MyFirstServlet&lt;/servlet-name&gt;
+  &lt;servlet-class&gt;com.zwj.servlet.MyFirstServlet&lt;/servlet-class&gt;
+&lt;/servlet&gt;
+&lt;servlet-mapping&gt;
+  &lt;servlet-name&gt;MyFirstServlet&lt;/servlet-name&gt;
+  &lt;url-pattern&gt;/myFirstServlet&lt;/url-pattern&gt;
+&lt;/servlet-mapping&gt;
+</code></pre><p>3)步骤可以用注解来代替<br>        @WebServlet(“/myFirstServlet”)</p>
+<h1 id="二、Servlet-生命周期："><a href="#二、Servlet-生命周期：" class="headerlink" title="二、Servlet 生命周期："></a>二、Servlet 生命周期：</h1><h3 id="1-SerServlet何时创建-默认第一次访问servlet时创建该对象"><a href="#1-SerServlet何时创建-默认第一次访问servlet时创建该对象" class="headerlink" title="1)SerServlet何时创建:默认第一次访问servlet时创建该对象"></a>1)SerServlet何时创建:默认第一次访问servlet时创建该对象</h3><h3 id="2-Servlet何时销毁-服务器关闭servlet就销毁了"><a href="#2-Servlet何时销毁-服务器关闭servlet就销毁了" class="headerlink" title="2)Servlet何时销毁:服务器关闭servlet就销毁了"></a>2)Servlet何时销毁:服务器关闭servlet就销毁了</h3><h1 id="三、Servlet-的配置详解："><a href="#三、Servlet-的配置详解：" class="headerlink" title="三、Servlet 的配置详解："></a>三、Servlet 的配置详解：</h1><pre><code>&lt;!--servlet类的配置--&gt;
+&lt;servlet&gt;
+  &lt;servlet-name&gt;MyFirstServlet&lt;/servlet-name&gt;
+  &lt;servlet-class&gt;com.zwj.servlet.MyFirstServlet&lt;/servlet-class&gt;
+&lt;/servlet&gt;
+&lt;!--servlet的虚拟路径配置--&gt;
+&lt;servlet-mapping&gt;
+  &lt;servlet-name&gt;MyFirstServlet&lt;/servlet-name&gt;
+  &lt;url-pattern&gt;/myFirstServlet&lt;/url-pattern&gt;
+&lt;/servlet-mapping&gt;      
+</code></pre><p><br><br>      </p>
+<h3 id="其中url-pattern的配置："><a href="#其中url-pattern的配置：" class="headerlink" title="其中url-pattern的配置："></a>其中url-pattern的配置：</h3><p>1）完全匹配 访问的资源与配置的资源完全相同才能访问到</p>
+<pre><code>&lt;url-pattern&gt;/myFirstServlet&lt;/url-pattern&gt;    
+</code></pre><p>2）目录匹配 格式：/虚拟的目录../<em> （</em>代表任意）</p>
+<pre><code>&lt;url-pattern&gt;abc/abc/*&lt;/url-pattern&gt;    
+</code></pre><p>3）扩展名匹配 格式：*.扩展名</p>
+<pre><code>&lt;url-pattern&gt;*.action&lt;/url-pattern&gt;    
+</code></pre>
       
 
       
@@ -400,7 +302,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/08/06/表单验证之validate/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/08/23/Servlet的基本了解/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -414,18 +316,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/08/23/Servlet的基本了解/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Servlet的基本了解
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/08/05/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
+    <a href="/2018/08/06/表单验证之validate/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">表单验证之validate</div>
       <i class="icon-circle-right"></i>
     </a>
   
