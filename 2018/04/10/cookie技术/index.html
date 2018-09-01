@@ -6,18 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>GreakJack</title>
+  <title>cookie技术 | GreakJack</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="共同进步">
-<meta property="og:type" content="website">
-<meta property="og:title" content="GreakJack">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="一、会话技术简介1．存储客户端的状态由一个问题引出今天的内容，例如网站的购物系统，用户将购买的商品信息存储到哪里？因为Http协议是无状态的，也就是说每个客户访问服务器端资源时，服务器并不知道该客户端是谁，所以需要会话技术识别客户端的状态。会话技术是帮助服务器记住客户端状态（区分客户端）">
+<meta property="og:type" content="article">
+<meta property="og:title" content="cookie技术">
+<meta property="og:url" content="http://yoursite.com/2018/04/10/cookie技术/index.html">
 <meta property="og:site_name" content="GreakJack">
-<meta property="og:description" content="共同进步">
+<meta property="og:description" content="一、会话技术简介1．存储客户端的状态由一个问题引出今天的内容，例如网站的购物系统，用户将购买的商品信息存储到哪里？因为Http协议是无状态的，也就是说每个客户访问服务器端资源时，服务器并不知道该客户端是谁，所以需要会话技术识别客户端的状态。会话技术是帮助服务器记住客户端状态（区分客户端）">
 <meta property="og:locale" content="中文/英文">
+<meta property="og:updated_time" content="2018-09-01T06:04:27.468Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="GreakJack">
-<meta name="twitter:description" content="共同进步">
+<meta name="twitter:title" content="cookie技术">
+<meta name="twitter:description" content="一、会话技术简介1．存储客户端的状态由一个问题引出今天的内容，例如网站的购物系统，用户将购买的商品信息存储到哪里？因为Http协议是无状态的，也就是说每个客户访问服务器端资源时，服务器并不知道该客户端是谁，所以需要会话技术识别客户端的状态。会话技术是帮助服务器记住客户端状态（区分客户端）">
   
     <link rel="alternative" href="/atom.xml" title="GreakJack" type="application/atom+xml">
   
@@ -157,16 +158,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-cookie技术" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-cookie技术" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/10/cookie技术/">cookie技术</a>
+    <h1 class="article-title" itemprop="name">
+      cookie技术
     </h1>
   
 
@@ -179,12 +178,45 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="一、会话技术简介"><a href="#一、会话技术简介" class="headerlink" title="一、会话技术简介"></a>一、会话技术简介</h1><h2 id="1．存储客户端的状态"><a href="#1．存储客户端的状态" class="headerlink" title="1．存储客户端的状态"></a>1．存储客户端的状态</h2><p>由一个问题引出今天的内容，例如网站的购物系统，用户将购买的商品信息存储到哪<br>里？因为Http协议是无状态的，也就是说每个客户访问服务器端资源时，服务器并<br>不知道该客户端是谁，所以需要会话技术识别客户端的状态。会话技术是帮助服务器<br>记住客户端状态（区分客户端）<br></p>
-        
-          <a class="article-more-a" href="/2018/04/10/cookie技术/#more">more >></a>
-        
+        <h1 id="一、会话技术简介"><a href="#一、会话技术简介" class="headerlink" title="一、会话技术简介"></a>一、会话技术简介</h1><h2 id="1．存储客户端的状态"><a href="#1．存储客户端的状态" class="headerlink" title="1．存储客户端的状态"></a>1．存储客户端的状态</h2><p>由一个问题引出今天的内容，例如网站的购物系统，用户将购买的商品信息存储到哪<br>里？因为Http协议是无状态的，也就是说每个客户访问服务器端资源时，服务器并<br>不知道该客户端是谁，所以需要会话技术识别客户端的状态。会话技术是帮助服务器<br>记住客户端状态（区分客户端）<br><a id="more"></a></p>
+<h2 id="2-会话技术"><a href="#2-会话技术" class="headerlink" title="2. 会话技术"></a>2. 会话技术</h2><p>从打开一个浏览器访问某个站点，到关闭这个浏览器的整个过程，成为一次会话。<br>会话技术就是记录这次会话中客户端的状态与数据的。<br>会话技术分为<strong> Cookie </strong>和<strong> Session </strong>：<br>Cookie：数据存储在客户端本地，减少服务器端的存储的压力，安全性不好，客户端    可以清除cookie<br>Session：将数据存储到服务器端，安全性相对好，增加服务器的压力</p>
+<p><strong>下面我们先讲解cookie</strong></p>
+<h1 id="二、Cookie技术"><a href="#二、Cookie技术" class="headerlink" title="二、Cookie技术"></a>二、Cookie技术</h1><h2 id="1-服务器端向客户端发送一个Cookie"><a href="#1-服务器端向客户端发送一个Cookie" class="headerlink" title="1.服务器端向客户端发送一个Cookie"></a>1.服务器端向客户端发送一个Cookie</h2><p><strong>1)创建cookie</strong><br>语法：Cookie cookie = new Cookie(String cookieName,String cookieValue);<br>例子：Cookie cookie = new Cookie(“username”，”zhangsan”);<br><em>注意</em>：cookie中不能够存储中文</p>
+<p><strong>2)设置Cookie在客户端的持久化时间</strong><br>cookie.setMaxAge(int seconds); —时间秒<br><em>注意：如果不设置持久化时间，cookie会存储在浏览器的内存中，浏览器关闭<br>cookie信息销毁（会话级别的cookie），如果设置持久化时间，cookie信息会<br>被持久化到浏览器的磁盘文件里</em></p>
+<p><strong>3）设置Cookie的携带路径</strong><br>cookie.setPath(String path);<br><em>注意：如果不设置携带路径，那么该cookie信息会在访问产生该cookie的    web资源所在的路径都携带cookie信息</em><br>示例：<br>cookie.setPath(“/myWeb”);<br>代表访问myWeb应用中的任何资源都携带cookie<br>cookie.setPath(“/myWeb/cookieServlet”);<br>代表访问myWeb中的cookieServlet时才携带cookie信息</p>
+<p><strong>4）向客户端发送cookie</strong><br>response.addCookie(Cookie cookie);</p>
+<p><strong>5）删除客户端的cookie</strong><br>如果想删除客户端的已经存储的cookie信息，那么就使用同名同路径的持久化时间为0的cookie进行覆盖即可<br>cookie.setMaxAge(0);</p>
+<h2 id="2-服务器端怎么接受客户端携带的Cookie"><a href="#2-服务器端怎么接受客户端携带的Cookie" class="headerlink" title="2.服务器端怎么接受客户端携带的Cookie"></a>2.服务器端怎么接受客户端携带的Cookie</h2><p><strong>1）通过request获得所有的Cookie</strong><br>Cookie[] cookies = request.getCookies();</p>
+<p><strong>2）遍历Cookie数组，通过Cookie的名称获得我们想要的Cookie</strong><br>for(Cookie cookie : cookies){<br>    if(cookie.getName().equal(cookieName)){<br>        String cookieValue = cookie.getValue();<br>    }<br>}</p>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -193,16 +225,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/04/10/cookie技术/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/04/10/cookie技术/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2018/03/23/session技术/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">session技术</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -222,203 +313,14 @@
 
 
 
-
   
-    <article id="post-session技术" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/23/session技术/">session技术</a>
-    </h1>
   
 
-        
-        <a href="/2018/03/23/session技术/" class="archive-article-date">
-  	<time datetime="2018-03-23T14:19:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-23</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Session技术"><a href="#Session技术" class="headerlink" title="Session技术"></a>Session技术</h1><p>Session技术是将数据存储在服务器端的技术，会为每个客户端都创建一块内存空间<br>存储客户的数据，但客户端需要每次都携带一个标识ID去服务器中寻找属于自己的内<br>存空间。所以说Session的实现是基于Cookie，Session需要借助于Cookie存储客<br>户的唯一性标识JSESSIONID<br></p>
-        
-          <a class="article-more-a" href="/2018/03/23/session技术/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/03/23/session技术/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Servlet的基本了解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/10/Servlet的基本了解/">Servlet的基本了解</a>
-    </h1>
   
 
-        
-        <a href="/2018/03/10/Servlet的基本了解/" class="archive-article-date">
-  	<time datetime="2018-03-10T11:16:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="一、Servlet-简介："><a href="#一、Servlet-简介：" class="headerlink" title="一、Servlet 简介："></a>一、Servlet 简介：</h1><h2 id="1-什么是Servlet呢？"><a href="#1-什么是Servlet呢？" class="headerlink" title="1.什么是Servlet呢？"></a>1.什么是Servlet呢？</h2><p>Servlet运行在服务端的Java小程序，是sun公司提供一套规范（接口），用来处理客户端请求、响应给浏览器的动态资源。但servlet的实质就是java代码，通过java的API动态的向客户端输出内容<br></p>
-        
-          <a class="article-more-a" href="/2018/03/10/Servlet的基本了解/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/03/10/Servlet的基本了解/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-表单验证之validate" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/26/表单验证之validate/">表单验证之validate</a>
-    </h1>
   
 
-        
-        <a href="/2017/10/26/表单验证之validate/" class="archive-article-date">
-  	<time datetime="2017-10-26T07:05:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="一、使用说明："><a href="#一、使用说明：" class="headerlink" title="一、使用说明："></a>一、使用说明：</h1><h3 id="1-表单验证分为两种方式：前端验证和后端验证。"><a href="#1-表单验证分为两种方式：前端验证和后端验证。" class="headerlink" title="1.表单验证分为两种方式：前端验证和后端验证。"></a>1.表单验证分为两种方式：前端验证和后端验证。</h3><h3 id="2-validate是属于前端的一种验证"><a href="#2-validate是属于前端的一种验证" class="headerlink" title="2.validate是属于前端的一种验证"></a>2.validate是属于前端的一种验证</h3><h3 id="3-validate是使用JQuery写的一个插件，所以使用validate必须使用JQuery"><a href="#3-validate是使用JQuery写的一个插件，所以使用validate必须使用JQuery" class="headerlink" title="3.validate是使用JQuery写的一个插件，所以使用validate必须使用JQuery"></a>3.validate是使用JQuery写的一个插件，所以使用validate必须使用JQuery</h3>
-        
-          <a class="article-more-a" href="/2017/10/26/表单验证之validate/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/26/表单验证之validate/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
 
 
@@ -441,8 +343,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

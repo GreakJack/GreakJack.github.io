@@ -6,19 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>session技术 | GreakJack</title>
+  <title>表单验证之validate | GreakJack</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Session技术Session技术是将数据存储在服务器端的技术，会为每个客户端都创建一块内存空间存储客户的数据，但客户端需要每次都携带一个标识ID去服务器中寻找属于自己的内存空间。所以说Session的实现是基于Cookie，Session需要借助于Cookie存储客户的唯一性标识JSESSIONID">
+  <meta name="description" content="全面的指导使用validate插件">
 <meta property="og:type" content="article">
-<meta property="og:title" content="session技术">
-<meta property="og:url" content="http://yoursite.com/2018/08/23/session技术/index.html">
+<meta property="og:title" content="表单验证之validate">
+<meta property="og:url" content="http://yoursite.com/2017/10/26/表单验证之validate/index.html">
 <meta property="og:site_name" content="GreakJack">
-<meta property="og:description" content="Session技术Session技术是将数据存储在服务器端的技术，会为每个客户端都创建一块内存空间存储客户的数据，但客户端需要每次都携带一个标识ID去服务器中寻找属于自己的内存空间。所以说Session的实现是基于Cookie，Session需要借助于Cookie存储客户的唯一性标识JSESSIONID">
+<meta property="og:description" content="全面的指导使用validate插件">
 <meta property="og:locale" content="中文/英文">
-<meta property="og:updated_time" content="2018-08-23T14:29:49.348Z">
+<meta property="og:image" content="http://yoursite.com/2017/10/26/表单验证之validate/1.png">
+<meta property="og:image" content="http://yoursite.com/2017/10/26/表单验证之validate/2.png">
+<meta property="og:image" content="http://yoursite.com/2017/10/26/表单验证之validate/4.png">
+<meta property="og:updated_time" content="2018-09-01T06:03:28.399Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="session技术">
-<meta name="twitter:description" content="Session技术Session技术是将数据存储在服务器端的技术，会为每个客户端都创建一块内存空间存储客户的数据，但客户端需要每次都携带一个标识ID去服务器中寻找属于自己的内存空间。所以说Session的实现是基于Cookie，Session需要借助于Cookie存储客户的唯一性标识JSESSIONID">
+<meta name="twitter:title" content="表单验证之validate">
+<meta name="twitter:description" content="全面的指导使用validate插件">
+<meta name="twitter:image" content="http://yoursite.com/2017/10/26/表单验证之validate/1.png">
   
     <link rel="alternative" href="/atom.xml" title="GreakJack" type="application/atom+xml">
   
@@ -158,36 +162,160 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-session技术" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-表单验证之validate" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      session技术
+      表单验证之validate
     </h1>
   
 
         
-        <a href="/2018/08/23/session技术/" class="archive-article-date">
-  	<time datetime="2018-08-23T14:19:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-23</time>
+        <a href="/2017/10/26/表单验证之validate/" class="archive-article-date">
+  	<time datetime="2017-10-26T07:05:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-26</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Session技术"><a href="#Session技术" class="headerlink" title="Session技术"></a>Session技术</h1><p>Session技术是将数据存储在服务器端的技术，会为每个客户端都创建一块内存空间<br>存储客户的数据，但客户端需要每次都携带一个标识ID去服务器中寻找属于自己的内<br>存空间。所以说Session的实现是基于Cookie，Session需要借助于Cookie存储客<br>户的唯一性标识JSESSIONID<br><a id="more"></a></p>
-<h2 id="1．获得Session对象"><a href="#1．获得Session对象" class="headerlink" title="1．获得Session对象"></a>1．获得Session对象</h2><p>HttpSession session = request.getSession();</p>
-<p>此方法会获得专属于当前会话的Session对象，如果服务器端没有该会话的Session<br>对象会创建一个新的Session返回，如果已经有了属于该会话的Session直接将已有<br>的Session返回（实质就是根据JSESSIONID判断该客户端是否在服务器上已经存在    session了）</p>
-<h2 id="2．怎样向session中存取数据（session也是一个域对象）"><a href="#2．怎样向session中存取数据（session也是一个域对象）" class="headerlink" title="2．怎样向session中存取数据（session也是一个域对象）"></a>2．怎样向session中存取数据（session也是一个域对象）</h2><p>Session是存储数据的域对象，所以session对象具有如下三个方法：<br>session.setAttribute(String name,Object obj);<br>session.getAttribute(String name);<br>session.removeAttribute(String name);</p>
-<h2 id="3-Session对象的生命周期"><a href="#3-Session对象的生命周期" class="headerlink" title="3. Session对象的生命周期"></a>3. Session对象的生命周期</h2><p><strong>创建</strong>：第一次执行request.getSession()时创建</p>
-<p><strong>销毁</strong>：<br>1）服务器（非正常）关闭时<br>2）session过期/失效（默认30分钟）–&gt;从不操作服务器端的资源开始计时<br>可以在工程的web.xml中进行配置</p>
-<pre><code>&lt;session-config&gt;
-    &lt;session-timeout&gt;30&lt;/session-timeout&gt;
-&lt;/session-config&gt;
-</code></pre><p>3）手动销毁session<br>session.invalidate();</p>
+        <h1 id="一、使用说明："><a href="#一、使用说明：" class="headerlink" title="一、使用说明："></a>一、使用说明：</h1><h3 id="1-表单验证分为两种方式：前端验证和后端验证。"><a href="#1-表单验证分为两种方式：前端验证和后端验证。" class="headerlink" title="1.表单验证分为两种方式：前端验证和后端验证。"></a>1.表单验证分为两种方式：前端验证和后端验证。</h3><h3 id="2-validate是属于前端的一种验证"><a href="#2-validate是属于前端的一种验证" class="headerlink" title="2.validate是属于前端的一种验证"></a>2.validate是属于前端的一种验证</h3><h3 id="3-validate是使用JQuery写的一个插件，所以使用validate必须使用JQuery"><a href="#3-validate是使用JQuery写的一个插件，所以使用validate必须使用JQuery" class="headerlink" title="3.validate是使用JQuery写的一个插件，所以使用validate必须使用JQuery"></a>3.validate是使用JQuery写的一个插件，所以使用validate必须使用JQuery</h3><a id="more"></a>
+<h1 id="二、使用前提："><a href="#二、使用前提：" class="headerlink" title="二、使用前提："></a>二、使用前提：</h1><h3 id="1-导入两个必需的包（这两个包网上都有百度下载）"><a href="#1-导入两个必需的包（这两个包网上都有百度下载）" class="headerlink" title="1.导入两个必需的包（这两个包网上都有百度下载）"></a>1.导入两个必需的包（这两个包网上都有百度下载）</h3><pre><code>&lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery-1.8.3.js&quot; &gt;&lt;/script&gt;
+&lt;scrip type=&quot;text/javascript&quot; src=&quot;js/jquery.validate.min.js&quot; &gt;&lt;/script&gt;
+</code></pre><p>这里的src路径跟你们自己所放位置而定</p>
+<h1 id="三、使用方式："><a href="#三、使用方式：" class="headerlink" title="三、使用方式："></a>三、使用方式：</h1><h2 id="话不多说直接看代码吧-这是整一个演示代码，下面我会一一分析"><a href="#话不多说直接看代码吧-这是整一个演示代码，下面我会一一分析" class="headerlink" title="话不多说直接看代码吧(这是整一个演示代码，下面我会一一分析)"></a>话不多说直接看代码吧(这是整一个演示代码，下面我会一一分析)</h2><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;UTF-8&quot;&gt;
+        &lt;title&gt;&lt;/title&gt;
+        &lt;style type=&quot;text/css&quot;&gt;
+            label.error{
+                color: red;
+            }
+        &lt;/style&gt;
+        &lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery-1.8.3.js&quot; &gt;&lt;/script&gt;
+        &lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery.validate.min.js&quot; &gt;&lt;/script&gt;
+        &lt;script type=&quot;text/javascript&quot;&gt;
+            $(function(){
+                $(&quot;#myForm&quot;).validate({
+                    rules:{
+                        username:{
+                            required:true,
+                            minlength:6
+                        },
+                        pwd:{
+                            required:true,
+                            minlength:6,
+                            digits:true
+                        },
+                        rePwd:{
+                            required:true,
+                            equalTo:&quot;[name=&apos;pwd&apos;]&quot;
+                        },
+                        sex:{
+                            required:true
+                        },
+                        email:{
+                            required:true,
+                            email:true
+                        }
+                    },
+                    messages:{
+                        username:{
+                            required:&quot;必须填写&quot;,
+                            minlength:&quot;长度最少是6位&quot;
+                        },
+                        pwd:{
+                            required:&quot;必须填写&quot;,
+                            minlength:&quot;长度最少是6位&quot;,
+                            digits:&quot;必须是数字&quot;
+                        },
+                        rePwd:{
+                            required:&quot;必须填写&quot;,
+                            equalTo:&quot;两次密码输入不相同&quot;
+                        },
+                        sex:{
+                            required:&quot;必须勾选&quot;
+                        },
+                        email:{
+                            required:&quot;必须填写&quot;,
+                            email:&quot;邮箱格式不正确&quot;
+                        }
+                    }
+                });
+            });
+        &lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;form action=&quot;#&quot; method=&quot;post&quot; id=&quot;myForm&quot;&gt;
+            用户名：&lt;input type=&quot;text&quot; name=&quot;username&quot; /&gt;&lt;br/&gt;
+            密码：&lt;input type=&quot;password&quot; name=&quot;pwd&quot; /&gt;&lt;br/&gt;
+            确认密码：&lt;input type=&quot;password&quot; name=&quot;rePwd&quot; /&gt;&lt;br /&gt;
+            邮件：&lt;input type=&quot;email&quot; name=&quot;email&quot; /&gt;&lt;br /&gt;
+            性别：&lt;input type=&quot;radio&quot; name=&quot;sex&quot; value=&quot;男&quot; /&gt;
+                &lt;input type=&quot;radio&quot; name=&quot;sex&quot; value=&quot;女&quot; /&gt;
+                &lt;label for=&quot;sex&quot; class=&quot;error&quot; style=&quot;display: none;&quot;&gt;&lt;/label&gt;&lt;br /&gt;
+            &lt;input type=&quot;submit&quot; value=&quot;提交&quot; /&gt;
+        &lt;/form&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h1 id="四、代码解析"><a href="#四、代码解析" class="headerlink" title="四、代码解析"></a>四、代码解析</h1><h3 id="1-首先我们先看一小部分的"><a href="#1-首先我们先看一小部分的" class="headerlink" title="1.首先我们先看一小部分的"></a>1.首先我们先看一小部分的</h3><pre><code>&lt;script type=&quot;text/javascript&quot;&gt;
+        $(function(){
+            $(&quot;#myForm&quot;).validate({
+                rules:{//rules是固定写法
+                    username:{//username就是要获取表单中name=username的input
+                        //下面就是制定的规则
+                        required:true,
+                        minlength:6
+                    }
+                }
+            });
+        });
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;form action=&quot;#&quot; method=&quot;post&quot; id=&quot;myForm&quot;&gt;
+        用户名：&lt;input type=&quot;text&quot; name=&quot;username&quot; /&gt;&lt;br/&gt;                        
+        &lt;input type=&quot;submit&quot; value=&quot;提交&quot; /&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+</code></pre><h3 id="然后这一小部分的效果图"><a href="#然后这一小部分的效果图" class="headerlink" title="然后这一小部分的效果图"></a>然后这一小部分的效果图</h3><p><img src="/2017/10/26/表单验证之validate/1.png" alt="图片1"><br>那么我们可以看到，它会出现一个提示</p>
+<h3 id="2-这时如果我们想，它的提示是英文的，可以自定义自己的提示吗？下面看一下以下的代码"><a href="#2-这时如果我们想，它的提示是英文的，可以自定义自己的提示吗？下面看一下以下的代码" class="headerlink" title="2.这时如果我们想，它的提示是英文的，可以自定义自己的提示吗？下面看一下以下的代码"></a>2.这时如果我们想，它的提示是英文的，可以自定义自己的提示吗？下面看一下以下的代码</h3><pre><code>&lt;script type=&quot;text/javascript&quot;&gt;
+        $(function(){
+            $(&quot;#myForm&quot;).validate({
+                rules:{
+                    username:{
+                        required:true,
+                        minlength:6
+                    }
+                },
+                messages:{//这是自定义提示
+                    username:{
+                        required:&quot;必须填写&quot;,
+                        minlength:&quot;长度最少是6位&quot;
+                    },
+                }
+            });
+        });
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;form action=&quot;#&quot; method=&quot;post&quot; id=&quot;myForm&quot;&gt;
+        用户名：&lt;input type=&quot;text&quot; name=&quot;username&quot; /&gt;&lt;br/&gt;                        
+        &lt;input type=&quot;submit&quot; value=&quot;提交&quot; /&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+</code></pre><h3 id="然后这一小部分的效果图-1"><a href="#然后这一小部分的效果图-1" class="headerlink" title="然后这一小部分的效果图"></a>然后这一小部分的效果图</h3><p><img src="/2017/10/26/表单验证之validate/2.png" alt="图片2"></p>
+<ul>
+<li>只要按照上面的规则写得话就可以自定义提示信息了</li>
+</ul>
+<h1 id="五、校验类型"><a href="#五、校验类型" class="headerlink" title="五、校验类型"></a>五、校验类型</h1><p><img src="/2017/10/26/表单验证之validate/4.png" alt="图片3"></p>
+<ul>
+<li>我们可以根据自己的需要为表单添加所需的提示信息 </li>
+</ul>
 
       
 
@@ -272,7 +400,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/08/23/session技术/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2017/10/26/表单验证之validate/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -286,11 +414,15 @@
   
 <nav id="article-nav">
   
-  
-    <a href="/2018/08/23/cookie技术/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">cookie技术</div>
-      <i class="icon-circle-right"></i>
+    <a href="/2018/03/10/Servlet的基本了解/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Servlet的基本了解
+        
+      </div>
     </a>
+  
   
 </nav>
 
